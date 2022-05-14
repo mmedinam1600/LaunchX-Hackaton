@@ -23,5 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-
+.idea
 frontend/node_modules
+Backend/node_modules

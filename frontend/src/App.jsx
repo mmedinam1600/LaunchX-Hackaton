@@ -7,14 +7,19 @@ import Login from './components/Login'
 import Mar from './components/Mar'
 import Peces from './components/Peces'
 
+import GlobalStyles from "./components/styled_components/globalStyles"
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Navbar/>
-        <Mar/>
-      </header>
-    </div>
+    <>
+      <GlobalStyles />
+      <div className="App">
+        <header className="App-header">
+          <Navbar/>
+          <Mar/>
+        </header>
+      </div>
+    </>
   )
 }
 

@@ -13,7 +13,7 @@ function App() {
     <>
       <GlobalStyles />
       <div>
-        <header className="App-header">
+        <header>
           <Navbar/>
           <Mar/>
           <Footer/>

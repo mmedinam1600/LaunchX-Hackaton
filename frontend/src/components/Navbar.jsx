@@ -10,45 +10,45 @@ const Logo = styled.img`
 `
 
 const Navb = styled.div`
-:root {
-    --blanco: #ffffff;
-    --oscuro: #212121;
-    --primarionavbar: #FFC107;
-    --secundarionavbar: #0097A7;
-}
+    :root {
+        --blanco: #ffffff;
+        --oscuro: #212121;
+        --primarionavbar: #FFC107;
+        --secundarionavbar: #0097A7;
+    }
 
-.contenedor {
-    max-width: 120rem;
-    margin: 0 auto;
-}
+    .contenedor {
+        max-width: 120rem;
+        margin: 0 auto;
+    }
 
-.nav-bg {
-    background-color: var(--secundarionavbar);
-}
+    .nav-bg {
+        background-color: var(--secundarionavbar);
+    }
 
-.navegacion-principal {
-    display: flex;
-    flex-direction: column;
-}
+    .navegacion-principal {
+        display: flex;
+        flex-direction: column;
+    }
 
-.navegacion-principal{
-    flex-direction: row;
-    justify-content: space-between;
-}
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
-.navegacion-principal a {
-    display: block;
-    text-align: center;
-    color: var(--blanco);
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: 700;
-    padding: 1rem;
-}
-.navegacion-principal a:hover{
-    background-color: var(--primarionavbar);
-    color: var(--oscuro);
-}
+    .navegacion-principal a {
+        display: block;
+        text-align: center;
+        color: var(--blanco);
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: 700;
+        padding: 1rem;
+    }
+    .navegacion-principal a:hover{
+        background-color: var(--primarionavbar);
+        color: var(--oscuro);
+    }
 `
 class Navbar extends React.Component{
     render(){

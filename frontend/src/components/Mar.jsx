@@ -40,7 +40,7 @@ function Mar() {
     <main>
       <Fondo/>
       {
-        peces.map( (pez) => <Pez key={pez.type} src={pez.url} name={pez.type} velocidad={10}/>)
+        peces.map( (pez) => <Pez key={pez.type} src={pez.url} name={pez.type} velocidad={Math.floor(Math.random() * (7 - 3 + 1) + 3)}/>)
       }
     </main>
   )

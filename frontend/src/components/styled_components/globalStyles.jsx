@@ -6,8 +6,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   footer {
-    position: absolute;
-    bottom: -150px;
+    position: relative;
+    padding-top: 90vh;
   }
   
   html {

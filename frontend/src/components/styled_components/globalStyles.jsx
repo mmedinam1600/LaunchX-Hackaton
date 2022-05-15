@@ -5,6 +5,11 @@ const GlobalStyles = createGlobalStyle`
     --primario: white;
   }
 
+  footer {
+    position: absolute;
+    bottom: -150px;
+  }
+  
   html {
     font-size: 62.5%;
       box-sizing: border-box; /* Acondicionamiento para box model */

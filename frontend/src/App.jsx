@@ -13,10 +13,11 @@ function App() {
   return (
     <>
       <GlobalStyles />
-      <div className="App">
+      <div>
         <header className="App-header">
           <Navbar/>
           <Mar/>
+          <Footer/>
         </header>
       </div>
     </>

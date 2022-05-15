@@ -4,9 +4,10 @@ import styled from 'styled-components'
 
 const Fondo = styled.img`
     background-image: url(${fondo});
-    height: 90vh;
-    width: 100vw;
-    margin: 10px;
+    display: block;
+    margin: 0 auto;
+    width: 134.9rem;
+    height: 100rem;
 `;
 
 class Mar extends React.Component{

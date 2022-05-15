@@ -38,6 +38,7 @@ function Mar() {
 
   return(
     <main>
+
       <Fondo/>
       {
         peces.map( (pez) => <Pez key={pez.type} src={pez.url} name={pez.type}/>)

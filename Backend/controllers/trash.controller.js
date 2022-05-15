@@ -1,4 +1,4 @@
-const {trashModel} = require("Backend/models/trash.model");
+const {trashModel} = require("../models/trash.model");
 
 
 class TrashController {

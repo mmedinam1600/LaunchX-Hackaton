@@ -1,6 +1,7 @@
 const { fishesModel } = require("../models/fishes.model");
 
 
+
 class FishesController {
 
   getAllFishes = async (req, res) => {

@@ -1,4 +1,5 @@
-const {scoreModel} = require("Backend/models/score.model");
+const {scoreModel} = require("../models/score.model");
+
 
 
 class ScoreController {

@@ -24,7 +24,6 @@ dist-ssr
 *.sw?
 .env
 frontend/.env
-frontend/.env/
 /frontend/.env
 
 
@@ -32,5 +31,4 @@ frontend/.env/
 frontend/node_modules
 Backend/node_modules
 Backend/.env
-Backend/.env/
 /Backend/.env

@@ -26,3 +26,4 @@ dist-ssr
 .idea
 frontend/node_modules
 Backend/node_modules
+Backend/.env

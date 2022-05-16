@@ -70,7 +70,7 @@ Tu misión será limpar la acumulación de plásticos que afectan a la diversa f
 Para ello deberás hacer lo siguiente:
 * Clic derecho sobre la basura para recogerla.
 * Por cada una se te otorgará 1 punto.
-* Si seleciconas un pez por error, perderás 1 punto.
+* Si seleccionas un pez por error, perderás 1 punto.
 * Si te descuidas y el contaminante permanece demasiado tiempo sobre el agua, perderás 1 punto y se lo llevará la corriente.
 
 ## Construido Con

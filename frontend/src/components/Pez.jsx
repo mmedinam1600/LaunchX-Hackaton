@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {useState, useEffect} from "react";
+import {useState, useEffect, useRef} from "react";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 
 
@@ -21,20 +21,12 @@ const Imagen = styled.img`
   transform: scaleX(${props => props.direccion || 1});
   transition: 0.5s linear;
 `;
-
-function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window;
-  return {
-    width,
-    height
-  };
-}
-
 function Pez(props) {
 
   const [movimientoX, setMovimientoX] = useState(0);
   const [movimientoY, setMovimientoY] = useState(0);
   const [direccion, setDireccion] = useState(1);
+
 
   const { height, width } = useWindowDimensions();
 
@@ -71,12 +63,12 @@ function Pez(props) {
   }
 
 
-
   return (
-    <PezStyle movimientoX={movimientoX} movimientoY={movimientoY} direccion={direccion} velocidad={props.velocidad} >
+    <PezStyle  movimientoX={movimientoX} movimientoY={movimientoY} direccion={direccion} velocidad={props.velocidad} >
       <Imagen name={props.type} src={props.src} alt="pez" direccion={direccion}/>
     </PezStyle>
   );
 }
 
 export default Pez;
+

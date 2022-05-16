@@ -22,6 +22,7 @@
     <li>
       <a href="#instalación-y-ejecución">Instalación y Ejecución</a>
     </li>
+    <li><a href="#como-jugar">Como jugar</a></li>
     <li><a href="#construido-con">Construido con</a></li>
     <li><a href="#licencia">License</a></li>
     <li><a href="#contacto">Contact</a></li>

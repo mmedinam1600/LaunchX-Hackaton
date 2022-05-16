@@ -5,7 +5,7 @@ const getBasura = async () => {
   try {
 
     const request = await axios.get(
-      'http://localhost:8080/trash',
+      'http://play.mickecraft.net:8080/trash',
       {
         headers: {
           Accept: 'application/json',

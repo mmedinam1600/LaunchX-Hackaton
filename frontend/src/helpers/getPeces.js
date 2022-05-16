@@ -5,7 +5,7 @@ const getPeces = async () => {
   try {
 
     const request = await axios.get(
-      'http://localhost:8080/fishes',
+      'http://play.mickecraft.net:8080/fishes',
         {
           headers: {
             Accept: 'application/json',

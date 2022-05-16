@@ -50,15 +50,16 @@ const Navb = styled.div`
         color: var(--oscuro);
     }
 `
-class Navbar extends React.Component{
-    render(){
+class Navbar extends React.Component {
+
+    render() {
         return(
             <Navb>
                 <div className="nav-bg">
                     <nav className="navegacion-principal contenedor">
                         <Logo/>
-                        <h3>Puntaje:</h3>
-                        <h3>Contacto</h3>
+                        <h3>Puntaje: {this.props.score || 0}</h3>
+                        <h3><a href="#contacto">Contacto</a></h3>
                     </nav>
                 </div>
             </Navb>

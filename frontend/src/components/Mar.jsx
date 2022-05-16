@@ -31,7 +31,7 @@ const decrementar = () => {
   contadorScore(--valor);
 }
 
-function Mar() {
+function Mar(props) {
 
   const [peces, setPeces] = useState(Array.prototype);
   const [basuras, setBasuras] = useState(Array.prototype);
@@ -66,18 +66,14 @@ function Mar() {
   }
 
   return(
-    <main>
+    <main id="juego">
       <Fondo/>
-      <div onClick={decrementar}>
         {
-          peces.map( (pez, i) => <Pez key={pez.type} src={pez.url} name={pez.type} velocidad={Math.floor(Math.random() * (7 - 3 + 1) + 3)}/>)
+          peces.map( (pez, i) => <Pez setScore={props.setScore} key={pez.type} src={pez.url} name={pez.type} velocidad={Math.floor(Math.random() * (7 - 3 + 1) + 3)}/>)
         }
-      </div>
-      <div onClick={incrementar}>
         {
-          basuras.map( (basura, i) => <Basura key={basura.type} url={basura.url}/>)
+          basuras.map( (basura, i) => <Basura setScore={props.setScore} key={basura.type} url={basura.url}/>)
         }
-      </div>
     </main>
   )
 }

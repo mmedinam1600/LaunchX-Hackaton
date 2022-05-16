@@ -35,13 +35,15 @@ function Basura(props) {
   const [reset, setReset] = useState(false);
 
 
-  function onBasuraContainerClick(limpiador) {
+  function onBasuraContainerClick(limpiador, smite) {
+    if(smite) props.setScore(oldScore => oldScore + 1);
     setReset(true);
     setEjeX( oldValue => Math.random() * (500) + 500 );
     setEjeY(Math.floor(Math.random() * (height - 85)));
     clearInterval(limpiador);
     if(limpiador) {
       limpiar();
+      props.setScore(oldScore => oldScore - 1);
     }
   }
 
@@ -70,7 +72,7 @@ function Basura(props) {
 
 
   return (
-    <BasuraContainer onClick={onBasuraContainerClick} ejeY={ejeY} ejeX={ejeX} velocidad={ reset ? 0.01 : 20}>
+    <BasuraContainer onClick={() => onBasuraContainerClick(null,true)} ejeY={ejeY} ejeX={ejeX} velocidad={ reset ? 0.01 : 20}>
       <Imagen src={props.url} alt="basura"/>
     </BasuraContainer>
   );

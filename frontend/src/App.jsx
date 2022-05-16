@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './App.css'
 
 import Navbar from './components/navbar'
@@ -9,13 +9,17 @@ import Mar from './components/Mar'
 import GlobalStyles from "./components/styled_components/globalStyles"
 
 function App() {
+
+  const [score, setScore] = useState(0);
+
+
   return (
     <>
       <GlobalStyles />
       <div>
         <header>
-          <Navbar/>
-          <Mar/>
+          <Navbar score={score}/>
+          <Mar setScore={setScore}/>
           <Footer/>
         </header>
       </div>

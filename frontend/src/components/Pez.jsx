@@ -10,6 +10,7 @@ const PezStyle = styled.div`
           translateX(calc(  ${ ({movimientoX}) => (movimientoX > 125 ? movimientoX - 120 : movimientoX) + "px" || 0} ) )
           translateY(calc( ${ ({movimientoY}) => (movimientoY > 75 ? movimientoY - 60 : movimientoY) + "px" || 0} ) );
   transition: ${props => props.velocidad + "s"} linear;
+  cursor: pointer;
 
   img {
     width: 125px;
@@ -26,6 +27,7 @@ function Pez(props) {
   const [movimientoX, setMovimientoX] = useState(0);
   const [movimientoY, setMovimientoY] = useState(0);
   const [direccion, setDireccion] = useState(1);
+
 
 
   const { height, width } = useWindowDimensions();
@@ -59,9 +61,12 @@ function Pez(props) {
     setMovimientoY(y);
   }
 
+  function onPezContainerClick() {
+    props.setScore(oldScore => oldScore - 1);
+  }
 
   return (
-    <PezStyle  movimientoX={movimientoX} movimientoY={movimientoY} direccion={direccion} velocidad={props.velocidad} >
+    <PezStyle onClick={onPezContainerClick} movimientoX={movimientoX} movimientoY={movimientoY} direccion={direccion} velocidad={props.velocidad} >
       <Imagen name={props.type} src={props.src} alt="pez" direccion={direccion}/>
     </PezStyle>
   );

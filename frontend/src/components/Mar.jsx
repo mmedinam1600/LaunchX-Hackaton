@@ -17,6 +17,19 @@ const Fondo = styled.img`
   background-size: cover;
 `;
 
+var valor = 0;
+
+const contadorScore = () => {
+  console.log(valor)
+}
+
+const incrementar = () => {
+  contadorScore(++valor);
+}
+
+const decrementar = () => {
+  contadorScore(--valor);
+}
 
 function Mar() {
 
@@ -55,12 +68,16 @@ function Mar() {
   return(
     <main>
       <Fondo/>
-      {
-        peces.map( (pez) => <Pez key={pez.type} src={pez.url} name={pez.type} velocidad={Math.floor(Math.random() * (7 - 3 + 1) + 3)}/>)
-      }
-      {
-        basuras.map( (basura) => <Basura key={basura.type} url={basura.url}/>)
-      }
+      <div onClick={decrementar}>
+        {
+          peces.map( (pez, i) => <Pez key={pez.type} src={pez.url} name={pez.type} velocidad={Math.floor(Math.random() * (7 - 3 + 1) + 3)}/>)
+        }
+      </div>
+      <div onClick={incrementar}>
+        {
+          basuras.map( (basura, i) => <Basura key={basura.type} url={basura.url}/>)
+        }
+      </div>
     </main>
   )
 }

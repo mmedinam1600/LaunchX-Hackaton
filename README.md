@@ -11,7 +11,7 @@
     Concientizar a las personas acerca de las consecuencias, producto de la contaminación en el océano, a través de una actividad interactiva.​
     <br />
     <br />
-    <a href="">Ver Demo</a>
+    <a href="http://20.51.243.156/">Ver Demo</a>
   </p>
 </div>
 

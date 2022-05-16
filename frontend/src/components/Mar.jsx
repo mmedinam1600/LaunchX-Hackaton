@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useRef, useCallback} from 'react';
+import React, {useEffect, useState} from 'react';
 import fondo from '../img/fondo.png'
 import styled from 'styled-components'
 import getPeces from "../helpers/getPeces";
@@ -52,15 +52,14 @@ function Mar() {
     });
   }
 
-
   return(
     <main>
       <Fondo/>
       {
-        peces.map( (pez, i) => <Pez key={pez.type} src={pez.url} name={pez.type} velocidad={Math.floor(Math.random() * (7 - 3 + 1) + 3)}/>)
+        peces.map( (pez) => <Pez key={pez.type} src={pez.url} name={pez.type} velocidad={Math.floor(Math.random() * (7 - 3 + 1) + 3)}/>)
       }
       {
-        basuras.map( (basura, i) => <Basura key={basura.type} url={basura.url}/>)
+        basuras.map( (basura) => <Basura key={basura.type} url={basura.url}/>)
       }
     </main>
   )

@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import {useState, useEffect, useRef} from "react";
+import {useState, useEffect} from "react";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 
 
 const PezStyle = styled.div`
   position: absolute;
   z-index: 1000;
-  transform: 
+  transform:
           translateX(calc(  ${ ({movimientoX}) => (movimientoX > 125 ? movimientoX - 120 : movimientoX) + "px" || 0} ) )
           translateY(calc( ${ ({movimientoY}) => (movimientoY > 75 ? movimientoY - 60 : movimientoY) + "px" || 0} ) );
   transition: ${props => props.velocidad + "s"} linear;
@@ -56,10 +56,7 @@ function Pez(props) {
       }
       return x;
     });
-    setMovimientoY((oldMovimientoY) =>  {
-
-      return y;
-    });
+    setMovimientoY(y);
   }
 
 

@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
 import useWindowDimensions from "../hooks/useWindowDimensions";
 
@@ -35,10 +35,14 @@ function Basura(props) {
   const [reset, setReset] = useState(false);
 
 
-  function onBasuraContainerClick() {
+  function onBasuraContainerClick(limpiador) {
     setReset(true);
-    setEjeX( oldValue => +500);
-    setEjeY(Math.floor(Math.random() * (height-85)));
+    setEjeX( oldValue => Math.random() * (500) + 500 );
+    setEjeY(Math.floor(Math.random() * (height - 85)));
+    clearInterval(limpiador);
+    if(limpiador) {
+      limpiar();
+    }
   }
 
   useEffect( () => {
@@ -49,9 +53,14 @@ function Basura(props) {
 
   useEffect( () => {
     moverBasura();
-    return () => {
-    }
+    limpiar();
   }, []);
+
+  const limpiar = () => {
+    var limpiador = setTimeout( () => {
+      onBasuraContainerClick(limpiador);
+    }, 23 * 1000);
+  }
 
 
 
@@ -61,7 +70,7 @@ function Basura(props) {
 
 
   return (
-    <BasuraContainer onClick={onBasuraContainerClick} ejeY={ejeY} ejeX={ejeX} velocidad={ reset ? 0.01 : 15}>
+    <BasuraContainer onClick={onBasuraContainerClick} ejeY={ejeY} ejeX={ejeX} velocidad={ reset ? 0.01 : 20}>
       <Imagen src={props.url} alt="basura"/>
     </BasuraContainer>
   );
